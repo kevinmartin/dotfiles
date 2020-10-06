@@ -1,0 +1,13 @@
+let g:go_fmt_command = "goimports"
+let g:go_gocode_unimported_packages = 1
+let g:go_auto_type_info = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_operators = 1
+let g:go_statusline_duration = "30s"
+let g:go_list_type = "quickfix"
+let g:go_test_show_name = 1
+let g:go_fold_enable = ['block', 'import', 'varconst', 'package_comment', 'comment']

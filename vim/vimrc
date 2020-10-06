@@ -1,0 +1,74 @@
+" welcome to the new millenium
+set nocompatible
+
+" Load plugins.
+call plugin_loader#Load()
+
+" Load settings.
+call lib#SourceDirectory('~/.vim/settings.d/')
+
+" enable syntax and plugins
+syntax enable
+syntax sync minlines=256
+filetype plugin indent on
+set re=1
+set fdm=syntax
+set nocursorcolumn
+set foldlevelstart=20
+
+" Change viminfo path.
+set viminfo+=n~/.vim/.viminfo
+
+" Search down into subfolders. Provides tab-completion for all file-related tasks.
+set path+=**
+
+" Remove trailing whitespace on save.
+au BufWritePre <buffer> :%s/\s\+$//e
+
+" always show gutter column even if empty
+autocmd BufEnter * sign define dummy
+autocmd BufEnter * execute 'sign place 9999 line=1 name=dummy buffer=' . bufnr('')
+
+" subtle hint for anything past col 80
+hi OverLength ctermbg=0 ctermfg=1
+match OverLength /\%81v.\+/
+
+" line numbers with styling
+hi CursorLineNr term=bold cterm=NONE ctermfg=LightGrey ctermbg=NONE
+hi LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE
+set number            " show line numbers
+"set relativenumber   " make line numbers relative
+set cursorline        " highlight the cursor's line
+set laststatus=2      " always display a status line
+set smartcase         " case-insensitive search if search pattern is all lowercase
+set clipboard=unnamed " use system pasteboard
+
+" miscellaneous
+set autowrite                  " auto-save current buffer when switching/making
+set backspace=indent,eol,start " try to make deleting work not crazy
+set directory=~/.vim/tmp//     " damn .swp files
+set expandtab                  " soft tabs
+set emoji                      " 😎
+set nofoldenable
+set hlsearch                   " highlight search matches
+set ignorecase                 " ignore case in patterns
+set incsearch                  " incremental search
+set linebreak                  " if wrapping, do it at whitespace
+set noerrorbells               " turn off error bells
+set scrolloff=5                " keep 5 lines of context around cursor
+set showcmd                    " show commands as they are typed
+set smarttab                   " try to get indenting correct
+set splitbelow                 " split to the bottom, not top
+set splitright                 " split to the right, not left
+set visualbell                 " seriously no error bells
+set wildmenu                   " better file menu
+
+" sane paste
+let &t_SI .= "\<Esc>[?2004h"
+let &t_EI .= "\<Esc>[?2004l"
+inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
+function! XTermPasteBegin()
+  set pastetoggle=<Esc>[201~
+  set paste
+  return ""
+endfunction

@@ -1,0 +1,5 @@
+Brewfile.lock.json
+
+vim/.viminfo
+vim/plugged
+vim/tmp
