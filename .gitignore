@@ -1,5 +1,6 @@
 Brewfile.lock.json
 
+vim/.netrwhist
 vim/.viminfo
 vim/plugged
 vim/tmp

@@ -1,0 +1,8 @@
+[init]
+        defaultBranch = main
+[commit]
+        gpgsign = true
+[credential]
+	helper = osxkeychain
+[include]
+        path = ~/.gitconfig.local
