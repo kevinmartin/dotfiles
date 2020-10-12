@@ -54,9 +54,9 @@ if [[ -z "$(gpg --list-secret-keys)" ]]; then
   ensure_identity
   cat >/tmp/gpg_key_settings <<EOF
 Key-Type: default
-Key-Length: 3072
+Key-Length: 4096
 Subkey-Type: default
-Subkey-Length: 3072
+Subkey-Length: 4096
 Name-Real: $name
 Name-Email: $email
 Expire-Date: 2y
