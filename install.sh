@@ -117,3 +117,6 @@ if [ -z $(grep "/usr/local/bin/bash" "/etc/shells") ]; then
   sudo chsh -s /usr/local/bin/bash
   chsh -s /usr/local/bin/bash
 fi
+
+# .macos settings
+./.macos
