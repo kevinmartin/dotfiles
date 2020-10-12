@@ -86,8 +86,7 @@ EOF
   done
 
   # Link the config.
-  rm -f ~/.gnupg/gpg-agent.conf ~/.gnupg/gpg.conf
-  ln -s ${BASEDIR}/gnupg/gpg-agent.conf ~/.gnupg/gpg-agent.conf
+  rm -f ~/.gnupg/gpg.conf
   ln -s ${BASEDIR}/gnupg/gpg.conf ~/.gnupg/gpg.conf
 
   # Check to see if GPG Agent is running. If not, start it.
@@ -95,7 +94,7 @@ EOF
     source ~/.gnupg/.gpg-agent-info
     export GPG_AGENT_INFO
   else
-    eval $(eval $(gpg-agent --daemon --options ~/.gnupg/gpg-agent.conf))
+    eval $(eval $(gpg-agent --daemon))
   fi
 
   # Restart gpg-agent to take new config into effect.
