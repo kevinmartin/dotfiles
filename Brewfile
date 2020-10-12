@@ -7,19 +7,19 @@ brew "bash"
 brew "bash-completion"
 brew "docker-completion"
 brew "git"
-brew "gnupg"
 brew "hashicorp/tap/terraform"
 brew "hyperkit"
 brew "jq"
 brew "make"
 brew "mas"
 brew "nvm"
-brew "pinentry"
 brew "telnet"
 brew "tldr"
 brew "tree"
 brew "vim"
 brew "watch"
+
+cask "gpg-suite-no-mail"
 
 # Fonts
 # Once installed, edit iTerm2 Preferences to use the font:
