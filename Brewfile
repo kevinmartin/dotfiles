@@ -19,6 +19,7 @@ brew "tree"
 brew "vim"
 brew "watch"
 
+cask "docker"
 cask "gpg-suite-no-mail"
 
 # Fonts
