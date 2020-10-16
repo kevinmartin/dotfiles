@@ -1,7 +1,7 @@
 tap "hashicorp/tap"
 tap "homebrew/cask-fonts"
 
-# Binaries
+# Binaries / Tools.
 brew "awscli"
 brew "bash"
 brew "bash-completion"
@@ -19,16 +19,15 @@ brew "tree"
 brew "vim"
 brew "watch"
 
-cask "docker"
 cask "gpg-suite-no-mail"
 
-# Fonts
+# Fonts.
 # Once installed, edit iTerm2 Preferences to use the font:
 #   Profiles > Text > Font > Meslo
 # TODO: Check in iTerm2 settings file.
 cask "font-meslo-for-powerline"
 
-# Quicklook Plugins
+# Quicklook Plugins.
 # May need to run:
 #   $ xattr -cr ~/Library/QuickLook/QLStephen.qlgenerator
 #   $ qlmanage -r
@@ -40,5 +39,8 @@ cask "quicklook-json"
 cask "quicklook-csv"
 cask "qlstephen"
 
-# Mac App Store
+# Applications.
 mas "Slack", id: 803453959
+
+cask "docker"
+cask "spotify"
