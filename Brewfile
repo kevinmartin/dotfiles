@@ -5,6 +5,7 @@ tap "homebrew/cask-fonts"
 brew "awscli"
 brew "bash"
 brew "bash-completion"
+brew "circleci"
 brew "docker-completion"
 brew "git"
 brew "hashicorp/tap/terraform"
@@ -20,6 +21,7 @@ brew "vim"
 brew "watch"
 
 cask "gpg-suite-no-mail"
+cask "mmhmm"
 
 # Fonts.
 # Once installed, edit iTerm2 Preferences to use the font:
