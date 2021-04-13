@@ -6,6 +6,7 @@ brew "awscli"
 brew "bash"
 brew "bash-completion"
 brew "circleci"
+brew "cocoapods"
 brew "docker-completion"
 brew "git"
 brew "go"
@@ -16,6 +17,7 @@ brew "hyperkit"
 brew "jq"
 brew "make"
 brew "mas"
+brew "md5sum"
 brew "nvm"
 brew "telnet"
 brew "tldr"
@@ -46,6 +48,7 @@ cask "qlstephen"
 
 # Applications.
 mas "Slack", id: 803453959
+mas "Xcode", id: 497799835
 
 cask "docker"
 cask "spotify"
