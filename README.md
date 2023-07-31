@@ -8,10 +8,10 @@ This repository will install Homebrew (if not already installed), common Homebre
 
 ## Instructions
 
-1. Install iTerm2.
+1. Open Terminal
 2. Clone this repository and `cd` into it.
   ```sh
-  $ git clone git@github.com:kevinmartin/dotfiles.git ~/Development/kevinmartin/dotfiles && cd $_
+  $ git clone https://github.com/kevinmartin/dotfiles.git ~/Development/kevinmartin/dotfiles && cd $_
   ```
 3. Install by running the `./install.sh` script.
 

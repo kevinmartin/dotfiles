@@ -8,3 +8,6 @@
         path = ~/.gitconfig.local
 [color]
 	ui = auto
+#[url "git@github.com"]
+#[url "ssh://git@github.com/"]
+#	insteadOf = https://github.com/

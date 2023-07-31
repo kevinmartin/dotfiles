@@ -12,7 +12,9 @@ function ensure_identity {
 
 # homebrew
 if test ! $(which brew); then
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 brew bundle
@@ -112,10 +114,10 @@ ln -s ${BASEDIR}/vim/ ~/.vim
 rm -f ~/.bash_profile
 ln -s ${BASEDIR}/bash_profile ~/.bash_profile
 
-if [ -z $(grep "/usr/local/bin/bash" "/etc/shells") ]; then
-  sudo sh -c 'echo "/usr/local/bin/bash" >> /etc/shells'
-  sudo chsh -s /usr/local/bin/bash
-  chsh -s /usr/local/bin/bash
+if [ -z $(grep "/opt/homebrew/bin/bash" "/etc/shells") ]; then
+  sudo sh -c 'echo "/opt/homebrew/bin/bash" >> /etc/shells'
+  sudo chsh -s /opt/homebrew/bin/bash
+  chsh -s /opt/homebrew/bin/bash
 fi
 
 # .macos settings
